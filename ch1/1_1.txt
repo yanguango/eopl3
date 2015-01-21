@@ -1,0 +1,40 @@
+1.
+top-down:
+1) n = 2, or
+2) n - 3 in S.
+
+bottom-up:
+1) 2 in S, and
+2) if n in S, then n + 3 in S.
+
+rules of inference:
+----------
+2 in S
+
+
+n in S
+----------
+n + 3 in S
+
+2.
+top-down:
+1) n = 1, or
+2) n - 2 in S, or
+3) n - 3 in S.
+
+bottom-up:
+1) 1 in S, and 
+2) if n in S, then n + 2 in S, and
+3) if n in S, then n + 3 in S.
+
+rules of inference:
+--------------------------
+1 in S
+
+
+n in S
+--------------------------
+n + 2 in S, and n + 3 in S
+
+
+

@@ -1,0 +1,1 @@
+subst-in-s-exp calls subst, subst guaranteed termination because it calls subst-in-s-exp in car of slist, and subst in smaller s-expression list.

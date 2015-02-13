@@ -1,3 +1,7 @@
+(define report-no-binding-found
+  (lambda (search-var)
+    (eopl:error 'apply-env "No binding for ~s" search-var)))
+
 ;; empty-env : () → Env
 ;; usage: produce a representation of the empty environment
 (define empty-env
@@ -20,17 +24,3 @@
           (if (equal? saved-var search-var)
               saved-val
               (app-env (cdr env) search-var))))))
-
-;; empty-env? : Env -> Bool
-;; usage : check whether the environment empty
-(define empty-env?
-  (lambda (env)
-    (null? env)))
-
-(define report-no-binding-found
-  (lambda (search-var env)
-    (eopl:error 'apply-env "No binding for ~s in ~s" search-var env)))
-
-(define report-invalid-env
-  (lambda (env)
-    (eopl:error 'apply-env "Bad environment ~s" env)))
